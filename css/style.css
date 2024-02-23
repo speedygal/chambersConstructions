@@ -104,7 +104,7 @@ body, html {
 .contact-us {
     margin: 20px;
     padding: 20px;
-    margin-top: 30px;
+
 }
 
 .about-us-content{
@@ -117,8 +117,8 @@ body, html {
   padding-bottom: 0;
 }
 
-.contact-us {
-    margin-top: 50px;
+.contact-us, .gallery-heading {
+    margin-top: 70px;
 }
 
 .button {
@@ -174,10 +174,6 @@ body, html {
     justify-content: center;
 }
 
-.services-container button {
-
-}
-
 .service {
     display: flex;
 }
@@ -215,7 +211,7 @@ body, html {
 
 
   /* Gallery */
-  .gallery-heading h1 {
+  .gallery-heading h2 {
     text-align: center;
   }
   
