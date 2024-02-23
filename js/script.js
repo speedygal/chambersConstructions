@@ -1,8 +1,6 @@
-/** Section 3 - Image Modal 
- * Assistance from Source: https://codepen.io/edubz/pen/wxbKwZ
-*/
+let touchStartX = 0; // Store the starting X position of a touch
+let touchEndX = 0; // Store the ending X position of a touch
 
-// Add event listener
 document.addEventListener("readystatechange", function(event) {
   if (event.target.readyState === "interactive") {
 
@@ -16,6 +14,27 @@ document.addEventListener("readystatechange", function(event) {
   const next = document.querySelector(".next");
   let currentImageNumber = 0;
 
+      // Capture the start of a touch
+      document.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+      }, false);
+  
+      // Capture the end of a touch
+      document.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipeGesture();
+      }, false);
+  
+      // Handle left and right swipes
+      function handleSwipeGesture() {
+        if (touchEndX < touchStartX) {
+          showImage(currentImageNumber + 1); // Swipe left, go to next image
+        }
+        if (touchEndX > touchStartX) {
+          showImage(currentImageNumber - 1); // Swipe right, go to previous image
+        }
+      }
+      
   // Set click events for the prev, next, and close buttons in the modal
   prev.onclick = function() {
     showImage(currentImageNumber - 1);
