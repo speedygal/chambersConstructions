@@ -4,11 +4,7 @@ body, html {
     font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif; /* Cleaner, more modern font */
     background-color: white; /* Maintains the soft background color */
     color: #333; /* Keeps the gentle text color for readability */
-    line-height: 1.5;
-}
-
-main {
-    /* padding-top: 20px; Adjust based on the height of your navbar */
+    line-height: 1.4;
 }
 
 /* Style for the About Us section's image */
@@ -75,14 +71,13 @@ main {
     display: flex;
 }
 
-.navbar li {
-    padding: 0 15px;
-}
-
 .navbar a {
     text-decoration: none;
     color: #333; /* Dark color for contrast */
-    line-height: 60px; /* Aligns text vertically */
+}
+
+.navbar li {
+  padding: 0 10px;
 }
 
 .navbar ul li a {
@@ -472,9 +467,9 @@ main {
       height: 55px; /* Adjust based on your logo */
   }
 
-.navbar li {
-    padding: 0 5px;
-}
+    .navbar li {
+        padding: 0 5px;
+    }
     /* Text */
     h1 {
       font-size: 26px;
@@ -537,7 +532,6 @@ main {
 }
 
 .our-services {
-    padding: 0;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -552,9 +546,6 @@ main {
 }
 
 @media (max-width: 620px) {
-  .navbar .logo {
-    height: 50px; /* Adjust based on your logo */
-}
 
   h1 {
     font-size: 20px;
@@ -576,16 +567,27 @@ main {
   .navbar {
     flex-direction: column;
     margin: 0px; 
-    padding: 0px;
-    padding-top: 10px;
+    padding: 10px 0;
   }
+
+  .navbar .logo {
+    height: 40px; /* Adjust based on your logo */
+    padding: 0px;
+}
 
   .navbar ul {
     margin: 0px; 
+    padding: 0px;
 }
 
+
 .navbar ul li a {
-  padding: 7px 10px;
+  margin: 0;
+  padding: 5px 8px;
+}
+
+.navbar a {
+  line-height: 40px; 
 }
 
 }
