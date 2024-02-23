@@ -450,33 +450,10 @@ button:hover {
   }
   
   @media (max-width: 768px) {
-    .main, .our-services, .about-us-content, .gallery-heading,
-    .contact-us {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    .about-us-content{
-      margin-top: 0px;
-      padding-top: 0;
-    }
-
-    .about-us {
-      margin-bottom: 0px;
-      padding-bottom: 0;
-    }
-
-    .contact-us, .gallery-heading {
-        margin-top: 70px;
-    }
-
     .overlay-text {
       bottom: 10px; 
-      left: 20px; /* Position from the left */
-      right: 20px;
     }
     
-
     .overlay-text {
       font-size: 28px;
      }
@@ -550,8 +527,8 @@ button:hover {
 }
 
 .our-services {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .service {
