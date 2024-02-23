@@ -104,7 +104,6 @@ body, html {
 .contact-us {
     margin: 20px;
     padding: 20px;
-
 }
 
 .about-us-content{
@@ -121,7 +120,7 @@ body, html {
     margin-top: 70px;
 }
 
-.button {
+button {
     background-color: transparent; /* More subdued button style */
     color: #333; /* Button text color */
     padding: 10px 20px;
@@ -131,7 +130,7 @@ body, html {
     transition: all 0.3s; /* Smooth transition for hover effects */
 }
 
-.button:hover {
+button:hover {
     background-color: #073555; /* Button fill on hover */
     color: white; /* Button text color on hover */
 }
