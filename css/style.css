@@ -600,4 +600,9 @@ footer img:hover {
     margin-top: 55px;
     padding: 10px
   }
+
+  .enquiry-form {
+    padding: 20px;
+    padding-bottom: 80px;
+  }
 }
