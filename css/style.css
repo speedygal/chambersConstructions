@@ -408,6 +408,15 @@ footer img:hover {
   filter: brightness(1);
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
 /* Media queries */
 @media (max-width: 1067px) {
   .service img {
