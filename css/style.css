@@ -560,11 +560,13 @@ footer img:hover {
   .navbar {
     flex-direction: column;
     margin: 0px; 
-    padding: 10px 0;
+    padding: 5px 0;
+    padding-bottom: 2px;
+    background-color: white; 
   }
 
   .navbar .logo {
-    height: 40px; 
+    height: 35px; 
     padding: 0px;
   }
 
@@ -575,13 +577,14 @@ footer img:hover {
 
   .navbar ul li a {
     margin: 0;
-    padding: 5px 8px;
+    padding: 4px 8px;
   }
 
   .navbar a {
-    line-height: 40px; 
+    line-height: 30px; 
   }
 
+  /* Padding  */
   .main, .our-services, .about-us-content, .gallery-heading, .contact-us {
     margin: 5px;
     padding: 15px;
