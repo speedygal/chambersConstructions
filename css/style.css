@@ -204,10 +204,14 @@ button:hover {
 }
 
 /* Gallery Styles */
-.gallery-heading h2 {
-    text-align: center;
+.gallery-heading h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  border-bottom: 2px solid #E0E0E0; 
+  margin: 10px 0; 
 }
-  
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
