@@ -139,7 +139,7 @@ button:hover {
 
 /* Services Styles */
 .service:not(:last-child) {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #b4b4b4;
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
@@ -578,6 +578,7 @@ footer img:hover {
     margin: 0px; 
     padding: 5px 0;
     padding-bottom: 2px;
+    background-color: white; 
   }
 
   .navbar .logo {
