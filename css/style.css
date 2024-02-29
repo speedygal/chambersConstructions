@@ -578,7 +578,6 @@ footer img:hover {
     margin: 0px; 
     padding: 5px 0;
     padding-bottom: 2px;
-    background-color: white; 
   }
 
   .navbar .logo {
@@ -599,7 +598,7 @@ footer img:hover {
   .navbar a {
     line-height: 40px; 
   }
-
+  
   /* Padding  */
   .main, .our-services, .about-us-content, .gallery-heading, .contact-us {
     margin: 5px;
