@@ -372,9 +372,9 @@ button:hover {
   resize: none;
 }
 
-#message-sent {
+/* #message-sent {
   display: none;
-}
+} */
 
 .error-message {
   color: red;
@@ -433,7 +433,6 @@ footer img:hover {
     height: 270px;
   }
 }
-
 
 @media (max-width: 930px) {
   .navbar .logo {
