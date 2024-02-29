@@ -1,6 +1,4 @@
-/** Section 4 - Contact Us Form 
- * Assistance from Source: https://www.abstractapi.com/guides/validate-phone-number-javascript
-*/
+emailjs.init("hvD2IoYefk2FlBl2P");
 
 // Get the HTML and input elements.
 const contactForm = document.getElementById("contact-form");
@@ -24,7 +22,7 @@ function validatePhone() {
    * */ 
   if (!phonePattern.test(phone)) {
     phoneInput.nextElementSibling.hidden = false;
-    return false;
+    return false;1
   } else {
     phoneInput.nextElementSibling.hidden = true;
     return true;
@@ -66,6 +64,7 @@ function validateMessage() {
   }
 }
 
+
 // Add input and blur event listeners to required fields
 phoneInput.addEventListener("blur", validatePhone);
 emailInput.addEventListener("blur", validateEmail);
@@ -73,7 +72,7 @@ messageInput.addEventListener("blur", validateMessage);
 
 // Add a submit event listener to the form
 contactForm.addEventListener("submit", (event) => {
-
+  
   // Prevent the default form submission behavior
   event.preventDefault();
 
@@ -90,13 +89,29 @@ contactForm.addEventListener("submit", (event) => {
   // Change the submit button text to "SENDING..."
   submitButton.innerHTML = "SENDING...";
 
-  // After a delay of 3 seconds, show the thank you message
-  setTimeout(() => {
+  const formData = new FormData(contactForm);
+  const data = {
+    name: formData.get("name"),
+    phone: formData.get("phone"),
+    email: formData.get("email"),
+    message: formData.get("message"),
+  };
 
-    // Hide the form and display the "Thank you" message
-    contactForm.style.display = "none";
-    messageSent.style.display = "block";
-  }, 3000);
+  emailjs.send("service_5zcmz28", "template_nnyrlnq", data)
+    .then((response) => {
+      console.log("Email sent:", response);
+      // Hide the form and display the "Thank you" message
+      contactForm.style.display = "none";
+      messageSent.style.display = "block";
+    })
+    .catch((error) => {
+      console.error("Error sending email:", error);
+      messageStatus.innerHTML = "Failed to send message.";
+    })
+    .finally(() => {
+      // Reset the submit button text to "SUBMIT"
+      submitButton.innerHTML = "SEND";
+    });
 });
 
 // Stops browser default form validation.

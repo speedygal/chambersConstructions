@@ -36,17 +36,24 @@ document.addEventListener("readystatechange", function(event) {
       }
       
   // Set click events for the prev, next, and close buttons in the modal
-  prev.onclick = function() {
-    showImage(currentImageNumber - 1);
-  };
+  if (prev) {
+    prev.onclick = function() {
+      showImage(currentImageNumber - 1);
+    };
+  }
   
-  next.onclick = function() {
-    showImage(currentImageNumber + 1);
-  };
+  if (next) {
+    next.onclick = function() {
+      showImage(currentImageNumber + 1);
+    };
+  }
   
-  close.onclick = function() {
-    modal.style.display = "none";
-  };
+  if (close) {
+    close.onclick = function() {
+      modal.style.display = "none";
+    };
+  }
+  
   
   // Add click event listener to each image to open the modal and display the clicked image
   images.forEach(function(image, number) {
@@ -85,6 +92,26 @@ document.addEventListener("readystatechange", function(event) {
   };
 }
 });
+
+function adjustImageForMobile() {
+  var image = document.getElementById('dynamicImage');
+  if (image) { // Check if the element exists
+    var screenWidth = window.innerWidth;
+  
+    if (screenWidth <= 768) { // Assuming 768px is your breakpoint for mobile
+        image.src = 'images/2.jpeg';
+    } else {
+        image.src = 'images/1.jpg'; // Ensures it goes back to the original on larger screens
+    }
+  }
+}
+
+
+// Call the function on initial load
+adjustImageForMobile();
+
+// Add an event listener to call the function on window resize
+window.addEventListener('resize', adjustImageForMobile);
 
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.navbar');
