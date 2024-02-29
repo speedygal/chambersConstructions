@@ -138,6 +138,15 @@ button:hover {
 }
 
 /* Services Styles */
+.our-services h4 {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+}
+
+.our-services p {
+  margin-top: 5px;
+}
+
 .service:not(:last-child) {
   border-bottom: 1px solid #b4b4b4;
   margin-bottom: 30px;
@@ -159,8 +168,8 @@ button:hover {
   padding: 0;
   margin: 0;
   padding-top: 10px;
-  padding-left: 130px;
-  padding-right: 130px;
+  padding-left: 100px;
+  padding-right: 100px;
   text-align: left;
   background-color: #F9F9F9;
 }
@@ -456,24 +465,14 @@ footer img:hover {
   }
 
   /* Services  */
-  .service img {
-    width: 290px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-  }
-
   .our-services {
       padding-left: 40px;
       padding-right: 40px;
   }
 
-  .service {
-      display:block;
-  }
-
-  .service-content {
-      padding-left: 0;
+  .service img {
+    width: 300px;
+    height: 250px;
   }
 }
 
@@ -487,7 +486,21 @@ footer img:hover {
   .modal-content {
     margin: 30% auto;
   }
+
+  .service {
+    display: block;
+  }
+
+  .service-content {
+    padding-left: 0;
+  }
+
+  .service img {
+    width: 290px;
+    height: 180px;
+  }
 }
+
 /* Media queries */
 @media (max-width: 768px) {
   /* Navigation  */
@@ -564,12 +577,16 @@ footer img:hover {
   }
 
   /* Services  */
+  .services-container {
+    margin-top: 20px;
+  }
+
   .our-services h2 {
     font-size: 20px;
   }
 
   .our-services h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* Navigation  */
